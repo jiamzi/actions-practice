@@ -16,3 +16,6 @@ jobs:
 
       - name: Show who triggered this
         run: echo "Run by ${{ github.actor }} on branch ${{ github.ref_name }}"
+
+      - name: Show run details
+        run: echo "Repository by ${{ github.repository }}"
