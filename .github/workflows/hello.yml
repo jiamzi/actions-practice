@@ -1,0 +1,18 @@
+name: Hello
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the repo
+        uses: actions/checkout@v4
+
+      - name: Say hello
+        run: echo "Hello"
+
+      - name: Show who triggered this
+        run: echo "Run by ${{ github.actor }} on branch ${{ github.ref_name }}"
